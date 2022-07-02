@@ -18,10 +18,15 @@ body,
 .container > footer {
   margin: 0;
   padding: 0;
-  display: flex;
   background-color: black;
   color: rgb(170, 170, 170);
+}
+
+.flex-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+  display: flex;
 }
 
 .container {
@@ -39,12 +44,6 @@ body,
   padding: 1rem;
   background-color: white;
   flex-grow: 1;
-}
-
-.container > footer {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
 }
 
 /* Nav styling */
@@ -104,4 +103,26 @@ body,
   position: absolute;
   z-index: 1;
   margin-top: 15%;
+}
+
+/* Footer styling */
+
+.flex-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.1rem;
+}
+
+.flex-footer > * {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.flex-footer a {
+  all: unset;
+  cursor: pointer;
 }
