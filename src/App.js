@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -11,6 +11,12 @@ import "./css/app.css";
 import products from "./data/products.json";
 
 export default function App() {
+  const [filter, setFilter] = useState(false);
+
+  function updateFilter(filter) {
+    setFilter(filter);
+  }
+
   const brand = "Rocket Industries";
   const tagline =
     "Explore freshly caught, pre-trained Pokemon for a steal.  Why bother catching them yourself?";
@@ -21,8 +27,20 @@ export default function App() {
       </header>
       <main className="centered">
         <Routes>
-          <Route path="/" element={<Home brand={brand} tagline={tagline} />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                brand={brand}
+                tagline={tagline}
+                updateFilter={updateFilter}
+              />
+            }
+          />
+          <Route
+            path="/shop"
+            element={<Shop products={products.pokemon} filter={filter} />}
+          />
           <Route path="/search" element={<Search />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />
