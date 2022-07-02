@@ -12,6 +12,8 @@ import products from "./data/products.json";
 
 export default function App() {
   const brand = "Rocket Industries";
+  const tagline =
+    "Explore freshly caught, pre-trained Pokemon for a steal.  Why bother catching them yourself?";
   return (
     <div className="container">
       <header>
@@ -19,10 +21,7 @@ export default function App() {
       </header>
       <main className="centered">
         <Routes>
-          <Route
-            path="/"
-            element={<Home brand={brand} products={products.pokemon} />}
-          />
+          <Route path="/" element={<Home brand={brand} tagline={tagline} />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/search" element={<Search />} />
           <Route path="/profile" element={<Profile />} />
