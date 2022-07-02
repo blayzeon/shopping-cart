@@ -46,6 +46,10 @@ body,
   flex-grow: 1;
 }
 
+.center-text {
+  text-align: center;
+}
+
 /* Nav styling */
 
 .flex-nav {
@@ -125,5 +129,35 @@ body,
 .flex-footer a,
 .flex-nav a {
   all: unset;
+  cursor: pointer;
+}
+
+/* Products & Shop */
+.tiled {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.product-card > img {
+  height: 10rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 33%;
+  font-weight: bold;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.product-card > * {
+  padding: 0;
+  margin: 0;
+}
+
+.product-card:hover {
+  outline: 1px solid red;
   cursor: pointer;
 }

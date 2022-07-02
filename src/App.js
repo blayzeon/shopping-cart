@@ -8,16 +8,21 @@ import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Cart from "./pages/Cart";
 import "./css/app.css";
+import products from "./data/products.json";
 
 export default function App() {
+  const brand = "Rocket Industries";
   return (
     <div className="container">
       <header>
-        <Nav brand="Rocket Industries" />
+        <Nav brand={brand} />
       </header>
       <main className="centered">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home brand={brand} products={products.pokemon} />}
+          />
           <Route path="/shop" element={<Shop />} />
           <Route path="/search" element={<Search />} />
           <Route path="/profile" element={<Profile />} />
