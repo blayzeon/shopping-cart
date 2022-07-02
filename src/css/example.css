@@ -1,3 +1,5 @@
+/* General Styling */
+
 html {
   background-color: rgb(220, 220, 220);
 }
@@ -10,6 +12,16 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.flex-nav,
+.container > footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: black;
+  color: rgb(170, 170, 170);
+  list-style-type: none;
 }
 
 .container {
@@ -25,18 +37,8 @@ body,
 .centered {
   margin: 0.5rem clamp(0.1rem, 20rem, 20%);
   padding: 1rem;
-  flex-grow: 1;
   background-color: white;
-}
-
-.flex-nav,
-.container > footer {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  background-color: black;
-  color: white;
-  list-style-type: none;
+  flex-grow: 1;
 }
 
 .container > footer {
@@ -45,16 +47,61 @@ body,
   padding: 1rem;
 }
 
-.flex-nav > li:hover,
-.flex-nav .active {
-  cursor: pointer;
-  background-color: rgba(133, 133, 133, 0.5);
-  user-select: none;
+/* Nav styling */
+
+.flex-nav {
+  align-items: center;
+  justify-content: center;
+  line-height: baseline;
 }
 
 .flex-nav > li {
-  padding: 1rem 0.5rem;
-  margin: 0 0.7rem;
+  padding: 0rem 0.5rem;
+  margin: 0.5rem 1rem;
   font-weight: bold;
   border-radius: 0.1rem;
+}
+
+.flex-nav > li:hover,
+.flex-nav .active {
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+.flex-pair > button {
+  all: unset;
+}
+
+.flex-pair {
+  display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.flex-pair > input {
+  flex-grow: 1;
+}
+
+.flex-end {
+  text-align: end;
+  justify-self: flex-end;
+}
+
+.bag-pair {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-nav svg {
+  width: 1.5rem;
+}
+
+.bag-pair > span {
+  position: absolute;
+  z-index: 1;
+  margin-top: 15%;
 }
