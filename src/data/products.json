@@ -1,0 +1,419 @@
+{
+  "pokemon": [
+    {
+      "name": "bulbasaur",
+      "type": ["grass", "poison"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "charmander",
+      "type": ["fire"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "squirtle",
+      "type": ["water"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "clefairy",
+      "type": ["fairy"],
+      "cost": "1000",
+      "sale": true
+    },
+    {
+      "name": "meowth",
+      "type": ["normal"],
+      "cost": "500",
+      "sale": true
+    },
+    {
+      "name": "abra",
+      "type": ["psychic"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "ponyta",
+      "type": ["fire"],
+      "cost": "1000",
+      "sale": false
+    },
+    {
+      "name": "cubone",
+      "type": ["ground"],
+      "cost": "1000",
+      "sale": false
+    },
+    {
+      "name": "chansey",
+      "type": ["normal"],
+      "cost": "2000",
+      "sale": true
+    },
+    {
+      "name": "growlithe",
+      "type": ["fire"],
+      "cost": "500",
+      "sale": true
+    },
+    {
+      "name": "eevee",
+      "type": ["normal"],
+      "cost": "8000",
+      "sale": true
+    },
+    {
+      "name": "porygon",
+      "type": ["normal"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "dratini",
+      "type": ["dragon"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "magikarp",
+      "type": ["water"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "ditto",
+      "type": ["normal"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "ekans",
+      "type": ["poison"],
+      "cost": "500",
+      "sale": true
+    },
+    {
+      "name": "koffing",
+      "type": ["poison"],
+      "cost": "500",
+      "sale": true
+    },
+    {
+      "name": "chikorita",
+      "type": ["grass"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "cyndaquil",
+      "type": ["fire"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "totodile",
+      "type": ["water"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "togepi",
+      "type": ["fairy"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "murkrow",
+      "type": ["dark", "flying"],
+      "cost": "2000",
+      "sale": true
+    },
+    {
+      "name": "wobbuffet",
+      "type": ["psychic"],
+      "cost": "4000",
+      "sale": true
+    },
+    {
+      "name": "sneasel",
+      "type": ["dark", "ice"],
+      "cost": "4000",
+      "sale": true
+    },
+    {
+      "name": "houndour",
+      "type": ["fire", "dark"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "tyrogue",
+      "type": ["fighting"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "larvitar",
+      "type": ["rock", "ground"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "smeargle",
+      "type": ["normal"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "treecko",
+      "type": ["grass"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "torchic",
+      "type": ["fire"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "mudkip",
+      "type": ["water"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "slakoth",
+      "type": ["normal"],
+      "cost": "500",
+      "sale": true
+    },
+    {
+      "name": "shroomish",
+      "type": ["grass"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "sableye",
+      "type": ["dark", "ghost"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "trapinch",
+      "type": ["ground"],
+      "cost": "1000",
+      "sale": true
+    },
+    {
+      "name": "swablu",
+      "type": ["normal", "flying"],
+      "cost": "2000",
+      "sale": true
+    },
+    {
+      "name": "cacnea",
+      "type": ["grass"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "feebas",
+      "type": ["water"],
+      "cost": "4000",
+      "sale": true
+    },
+    {
+      "name": "bagon",
+      "type": ["dragon"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "beldum",
+      "type": ["steel", "psychic"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "turtwig",
+      "type": ["grass"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "chimchar",
+      "type": ["fire"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "piplup",
+      "type": ["water"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "shinx",
+      "type": ["electric"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "budew",
+      "type": ["grass", "poison"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "glameow",
+      "type": ["normal"],
+      "cost": "500",
+      "sale": true
+    },
+    {
+      "name": "stunky",
+      "type": ["poison", "dark"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "spiritomb",
+      "type": ["ghost", "dark"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "gible",
+      "type": ["dragon", "ground"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "riolu",
+      "type": ["fighting"],
+      "cost": "8000",
+      "sale": true
+    },
+    {
+      "name": "rotom",
+      "type": ["ghost", "electric"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "snivy",
+      "type": ["grass"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "tepig",
+      "type": ["fire"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "oshawott",
+      "type": ["water"],
+      "cost": "5000",
+      "sale": false
+    },
+    {
+      "name": "purrloin",
+      "type": ["dark"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "munna",
+      "type": ["psychic"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "timburr",
+      "type": ["fighting"],
+      "cost": "500",
+      "sale": false
+    },
+
+    {
+      "name": "venipede",
+      "type": ["bug", "poison"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "sandle",
+      "type": ["ground", "dark"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "darumaka",
+      "type": ["fire"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "scraggy",
+      "type": ["dark", "fighting"],
+      "cost": "500",
+      "sale": false
+    },
+    {
+      "name": "zorua",
+      "type": ["dark"],
+      "cost": "8000",
+      "sale": true
+    },
+    {
+      "name": "litwick",
+      "type": ["fire", "ghost"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "axew",
+      "type": ["dragon"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "rufflet",
+      "type": ["normal", "flying"],
+      "cost": "2000",
+      "sale": false
+    },
+    {
+      "name": "vullaby",
+      "type": ["dark", "flying"],
+      "cost": "2000",
+      "sale": true
+    },
+    {
+      "name": "durant",
+      "type": ["bug", "steel"],
+      "cost": "2000",
+      "sale": true
+    },
+    {
+      "name": "deino",
+      "type": ["dark", "dragon"],
+      "cost": "8000",
+      "sale": false
+    },
+    {
+      "name": "larvesta",
+      "type": ["bug", "fire"],
+      "cost": "8000",
+      "sale": false
+    }
+  ]
+}
