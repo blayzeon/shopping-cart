@@ -1,0 +1,60 @@
+html {
+  background-color: rgb(220, 220, 220);
+}
+
+html,
+body,
+#root,
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > * {
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.centered {
+  margin: 0.5rem clamp(0.1rem, 20rem, 20%);
+  padding: 1rem;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.flex-nav,
+.container > footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: black;
+  color: white;
+  list-style-type: none;
+}
+
+.container > footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.flex-nav > li:hover,
+.flex-nav .active {
+  cursor: pointer;
+  background-color: rgba(133, 133, 133, 0.5);
+  user-select: none;
+}
+
+.flex-nav > li {
+  padding: 1rem 0.5rem;
+  margin: 0 0.7rem;
+  font-weight: bold;
+  border-radius: 0.1rem;
+}
