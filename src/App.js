@@ -7,12 +7,14 @@ import Shop from "./pages/Shop";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Cart from "./pages/Cart";
+import Details from "./pages/Details";
 import "./css/app.css";
 import products from "./data/products.json";
 
 export default function App() {
   const [filter, setFilter] = useState(false);
   const [cart, setCart] = useState([]);
+  const sale = 0.2;
 
   function updateCart(productObj) {
     const newCart = cart;
@@ -51,6 +53,10 @@ export default function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/cart" element={<Cart />} />
+          <Route
+            path="*"
+            element={<Details products={products.pokemon} sale={sale} />}
+          />
         </Routes>
       </main>
       <footer className="flex-footer">
