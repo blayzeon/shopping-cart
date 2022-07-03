@@ -2,6 +2,12 @@ import React from "react";
 import { Link, useMatch, useResolvePath } from "react-router-dom";
 
 export default function Nav(props) {
+  const cartTotal =
+    props.cart.length > 0
+      ? props.cart.reduce(function (prevVal, curVal) {
+          return prevVal + curVal.quanity;
+        }, 0)
+      : 0;
   return (
     <nav>
       <ul className="flex-nav flex-list">
@@ -59,7 +65,7 @@ export default function Nav(props) {
                 ></path>
               </svg>
               <span id="bag-number">
-                <span>0</span>
+                <span>{cartTotal}</span>
               </span>
             </div>
           </Link>

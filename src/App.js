@@ -12,6 +12,13 @@ import products from "./data/products.json";
 
 export default function App() {
   const [filter, setFilter] = useState(false);
+  const [cart, setCart] = useState([]);
+
+  function updateCart(productObj) {
+    const newCart = cart;
+    cart.push(productObj);
+    setCart(newCart);
+  }
 
   function updateFilter(filter) {
     setFilter(filter);
@@ -23,7 +30,7 @@ export default function App() {
   return (
     <div className="container">
       <header>
-        <Nav brand={brand} />
+        <Nav brand={brand} cart={cart} />
       </header>
       <main className="centered">
         <Routes>
