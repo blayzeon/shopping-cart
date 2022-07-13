@@ -1,11 +1,12 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
 
 export default function Product(props) {
   const src = `/img/${props.label}.svg`;
   return (
     <div className="product-card" onClick={props.handleClick}>
-      <img src={src} alt={props.label} />
+      <div>
+        <img src={src} alt={props.label} />
+      </div>
       <p>{props.title}</p>
     </div>
   );
