@@ -45,7 +45,7 @@ export default function Profile() {
 
         <div className="flex-center-gap">
           <label>
-            Shirt Size:
+            Shirt Size:{" "}
             <select>
               <option>S</option>
               <option>M</option>
