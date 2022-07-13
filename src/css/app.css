@@ -14,6 +14,11 @@ body,
   padding: 0;
 }
 
+.product-name {
+  font-size: xx-large;
+  text-transform: capitalize;
+}
+
 .flex-nav,
 .container > footer {
   margin: 0;
@@ -31,11 +36,51 @@ body,
 
 .flex-container {
   display: flex;
+  text-align: center;
 }
 
-.container {
+.container,
+form {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.flex-text-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.flex-text-img > img {
+  width: 25%;
+}
+
+.container > form {
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input-container > label {
+  width: 4rem;
+}
+
+.input-container > input {
+  flex-grow: 1;
+}
+
+.flex-center-gap {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
 }
 
 .container > * {
@@ -69,7 +114,9 @@ body,
   border-radius: 0.1rem;
 }
 
-.flex-nav > li:hover,
+h1,
+h2,
+a > *:hover,
 .flex-nav .active {
   cursor: pointer;
   user-select: none;
@@ -167,11 +214,6 @@ body,
   all: unset;
   width: 30%;
   height: fit-content;
-}
-
-.tiled > *:hover {
-  cursor: pointer;
-  color: red;
 }
 
 .tiled > * {
