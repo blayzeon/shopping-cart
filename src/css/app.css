@@ -229,12 +229,13 @@ body,
 .product-variation > select {
   all: unset;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   font-weight: bold;
 }
 
-.product-counter > button:focus {
-  outline: 1px solid gray;
+.product-counter > button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
 }
 
 .product-counter,
@@ -245,6 +246,7 @@ body,
   justify-content: center;
   outline: 1px solid black;
   margin: 0.3rem;
+  padding: 0 0.3rem;
   border-radius: 0.3rem;
   gap: 0.5rem;
   overflow: hidden;
