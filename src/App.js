@@ -17,7 +17,34 @@ export default function App() {
   const sale = 0.2;
 
   function updateCart(productObj) {
-    setCart((prevCart) => [...prevCart, productObj]);
+    const newCart = cart;
+
+    const isDupe =
+      cart.length > 0
+        ? cart.find((dupe) => dupe.product === productObj.product)
+        : false;
+
+    if (isDupe) {
+      if (productObj.quantity === 0) {
+        // if the quantity is zero, we should remove it from the cart
+        const index = newCart.findIndex(
+          (item) => item.name === productObj.name
+        );
+
+        newCart.splice(index, 1);
+        setCart([...newCart]);
+      } else {
+        // otherwise just adjust the quantity
+        isDupe.quantity = productObj.quantity;
+        setCart((prevCart) => [...prevCart]);
+      }
+    } else {
+      if (productObj.quantity === 0) {
+        // don't add the item if the quantity is 0
+        return;
+      }
+      setCart((prevCart) => [...prevCart, productObj]);
+    }
   }
 
   function updateFilter(filter) {
@@ -27,7 +54,6 @@ export default function App() {
   const brand = "Rocket Industries";
   const tagline =
     "Explore freshly caught, pre-trained Pokemon for a steal.  Why bother catching them yourself?";
-  const cartControls = { items: cart, updateCart, setCart };
   return (
     <div className="container">
       <header>
@@ -58,7 +84,7 @@ export default function App() {
               <Details
                 products={products.pokemon}
                 sale={sale}
-                cart={cartControls}
+                updateCart={updateCart}
               />
             }
           />

@@ -13,41 +13,13 @@ export default function Details(props) {
   );
 
   const handleClick = () => {
-    const cart = props.cart;
-    const isDupe =
-      cart.items.length > 0
-        ? cart.items.find((dupe) => dupe.product === current.name)
-        : false;
+    const product = {
+      product: current.name,
+      quantity: count,
+      cost: current.cost,
+    };
 
-    /*
-      if the item already exists in the cart,
-          simply update the quantity rather than re-adding the product 
-          this prevents going over the max quantity
-    */
-    if (isDupe) {
-      if (count === 0) {
-        // if the quantity is zero, we should remove it from the cart
-        const index = cart.items.findIndex(
-          (item) => item.name === current.name
-        );
-        const newCart = cart.items;
-        newCart.splice(index, 1);
-        cart.setCart([...newCart]);
-      } else {
-        // otherwise just adjust the quantity
-        isDupe.quanity = count;
-        cart.setCart((prevCart) => [...prevCart]);
-      }
-    } else {
-      // otherwise we can add the product to the cart normally
-      const product = {
-        product: current.name,
-        quanity: count,
-        cost: current.cost,
-      };
-
-      cart.updateCart(product);
-    }
+    props.updateCart(product);
   };
 
   function incrCount() {

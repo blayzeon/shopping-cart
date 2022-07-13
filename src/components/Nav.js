@@ -5,7 +5,7 @@ export default function Nav(props) {
   const cartTotal =
     props.cart.length > 0
       ? props.cart.reduce(function (prevVal, curVal) {
-          return prevVal + curVal.quanity;
+          return prevVal + curVal.quantity;
         }, 0)
       : 0;
   return (
