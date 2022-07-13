@@ -17,9 +17,7 @@ export default function App() {
   const sale = 0.2;
 
   function updateCart(productObj) {
-    const newCart = cart;
-    cart.push(productObj);
-    setCart(newCart);
+    setCart((prevCart) => [...prevCart, productObj]);
   }
 
   function updateFilter(filter) {
@@ -29,6 +27,7 @@ export default function App() {
   const brand = "Rocket Industries";
   const tagline =
     "Explore freshly caught, pre-trained Pokemon for a steal.  Why bother catching them yourself?";
+  const cartControls = { items: cart, updateCart, setCart };
   return (
     <div className="container">
       <header>
@@ -55,7 +54,13 @@ export default function App() {
           <Route path="/cart" element={<Cart />} />
           <Route
             path="*"
-            element={<Details products={products.pokemon} sale={sale} />}
+            element={
+              <Details
+                products={products.pokemon}
+                sale={sale}
+                cart={cartControls}
+              />
+            }
           />
         </Routes>
       </main>
