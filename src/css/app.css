@@ -264,20 +264,36 @@ a > *:hover,
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .product-counter > button,
 .product-variation > select {
   all: unset;
   cursor: pointer;
-  padding: 0.3rem 0.5rem;
+  padding: 0 0.5rem;
   font-weight: bold;
+}
+
+.product-counter > * {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.product-counter > button {
+  flex-grow: 1;
+  height: 100%;
 }
 
 .product-counter > button:active {
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+}
+
+.product-variation > select {
+  margin-left: 0.5rem;
 }
 
 .product-counter,
@@ -287,14 +303,13 @@ a > *:hover,
   align-items: center;
   justify-content: center;
   outline: 1px solid black;
-  margin: 0.3rem;
-  padding: 0 0.3rem;
   border-radius: 0.3rem;
   gap: 0.5rem;
   overflow: hidden;
 }
 
-.product-counter > p {
+.product-counter {
+  font-family: monospace;
   padding: 0;
   margin: 0;
 }
@@ -304,6 +319,14 @@ a > *:hover,
   width: 100%;
 }
 
+.product-table * {
+  height: 100%;
+}
+
+.product-table .product-counter {
+  outline: none !important;
+}
+
 .product-table > caption {
   font-size: x-large;
   margin-bottom: 0.5rem;
@@ -311,6 +334,7 @@ a > *:hover,
 
 .product-table img {
   width: 5rem;
+  padding: 0.5rem;
 }
 
 .product-table a {
@@ -321,7 +345,6 @@ a > *:hover,
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
   text-transform: capitalize;
 }
 
