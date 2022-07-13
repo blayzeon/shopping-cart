@@ -19,6 +19,12 @@
       "sale": ["false"]
     },
     {
+      "name": "rattata",
+      "type": ["normal"],
+      "cost": "500",
+      "sale": ["true"]
+    },
+    {
       "name": "clefairy",
       "type": ["fairy"],
       "cost": "1000",
