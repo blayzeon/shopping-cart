@@ -3,42 +3,27 @@ import Variation from "../components/Variation";
 import Count from "../components/Count";
 
 export default function Details(props) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const path = window.location.href;
   const urlProduct = path.match(/product\/\s*([^\n\r]*)/);
-  const MIN_QUANTITY = 0;
-  const MAX_QUANTITY = 9;
   const current = props.products.find(
     (product) => product.name === urlProduct[1]
   );
+
+  function newCount(amount) {
+    setCount(amount);
+  }
 
   const handleClick = () => {
     const product = {
       product: current.name,
       quantity: count,
       cost: current.cost,
+      variation: document.querySelector("select").value,
     };
 
     props.updateCart(product);
   };
-
-  function incrCount() {
-    if (count >= MAX_QUANTITY) {
-      return;
-    }
-
-    const newCount = count + 1;
-    setCount(newCount);
-  }
-
-  function decrCount() {
-    if (count <= MIN_QUANTITY) {
-      return;
-    }
-
-    const newCount = count - 1;
-    setCount(newCount);
-  }
 
   function productPage(product, sale) {
     if (product) {
@@ -59,29 +44,8 @@ export default function Details(props) {
           </div>
           <div className="product-options">
             <div className="flex-pair">
-              <Variation
-                label={"Nature"}
-                options={[
-                  "Bashful",
-                  "Docile",
-                  "Hardy",
-                  "Quirky",
-                  "Serious",
-                  "Adamant",
-                  "Brave",
-                  "Lonely",
-                  "Naughty",
-                  "Calm",
-                  "Gentle",
-                  "Sassy",
-                  "Careful",
-                  "Timid",
-                  "Hasty",
-                  "Jolly",
-                  "Naive",
-                ]}
-              />
-              <Count count={count} incr={incrCount} decr={decrCount} />
+              <Variation label={"Nature"} options={props.variations} />
+              <Count count={count} min="0" max="9" onChange={newCount} />
             </div>
             <button onClick={handleClick}>Add to Cart</button>
           </div>

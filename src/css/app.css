@@ -298,3 +298,37 @@ a > *:hover,
   padding: 0;
   margin: 0;
 }
+
+.product-table {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.product-table > caption {
+  font-size: x-large;
+  margin-bottom: 0.5rem;
+}
+
+.product-table img {
+  width: 5rem;
+}
+
+.product-table a {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+
+.product-table a:hover {
+  text-decoration: underline;
+}
+
+.product-table td {
+  border: 1px solid black;
+}

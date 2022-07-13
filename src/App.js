@@ -17,22 +17,27 @@ export default function App() {
   const sale = 0.2;
 
   function updateCart(productObj) {
-    const newCart = cart;
-
     const isDupe =
       cart.length > 0
-        ? cart.find((dupe) => dupe.product === productObj.product)
+        ? cart.find(
+            (dupe) =>
+              dupe.product === productObj.product &&
+              dupe.variation === productObj.variation
+          )
         : false;
 
     if (isDupe) {
       if (productObj.quantity === 0) {
         // if the quantity is zero, we should remove it from the cart
-        const index = newCart.findIndex(
-          (item) => item.name === productObj.name
+        const index = cart.findIndex(
+          (item) =>
+            item.product === productObj.product &&
+            item.variation === productObj.variation
         );
-
+        const newCart = cart;
         newCart.splice(index, 1);
         setCart([...newCart]);
+        return;
       } else {
         // otherwise just adjust the quantity
         isDupe.quantity = productObj.quantity;
@@ -77,12 +82,16 @@ export default function App() {
           />
           <Route path="/search" element={<Search />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/cart"
+            element={<Cart cart={cart} updateCart={updateCart} />}
+          />
           <Route
             path="*"
             element={
               <Details
                 products={products.pokemon}
+                variations={products.variation}
                 sale={sale}
                 updateCart={updateCart}
               />

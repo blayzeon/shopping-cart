@@ -1,4 +1,23 @@
 {
+  "variation": [
+    "Bashful",
+    "Docile",
+    "Hardy",
+    "Quirky",
+    "Serious",
+    "Adamant",
+    "Brave",
+    "Lonely",
+    "Naughty",
+    "Calm",
+    "Gentle",
+    "Sassy",
+    "Careful",
+    "Timid",
+    "Hasty",
+    "Jolly",
+    "Naive"
+  ],
   "pokemon": [
     {
       "name": "bulbasaur",
@@ -17,12 +36,6 @@
       "type": ["water"],
       "cost": "5000",
       "sale": ["false"]
-    },
-    {
-      "name": "rattata",
-      "type": ["normal"],
-      "cost": "500",
-      "sale": ["true"]
     },
     {
       "name": "clefairy",
