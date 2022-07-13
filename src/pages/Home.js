@@ -7,12 +7,12 @@ export default function Home(props) {
     props.updateFilter(false);
   };
 
-  const dragonFilter = () => {
-    props.updateFilter({ key: "type", value: "dragon" });
+  const handleSpecial = () => {
+    props.updateFilter(props.filter.special);
   };
 
   const saleFilter = () => {
-    props.updateFilter({ key: "sale", value: "true" });
+    props.updateFilter(props.filter.sale);
   };
 
   return (
@@ -23,17 +23,13 @@ export default function Home(props) {
       </div>
       <div className="tiled">
         <Link to="/shop" className="product-card">
-          <Product
-            label="bulbasaur"
-            title="Shop Pokemon"
-            handleClick={noFilter}
-          />
+          <Product label="ralts" title="Shop Pokemon" handleClick={noFilter} />
         </Link>
         <Link to="/shop">
           <Product
-            label="dratini"
-            title="Shop Dragons"
-            handleClick={dragonFilter}
+            label="azumarill"
+            title="Shop Evolved"
+            handleClick={handleSpecial}
           />
         </Link>
         <Link to="/shop">

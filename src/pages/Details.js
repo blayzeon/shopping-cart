@@ -30,9 +30,10 @@ export default function Details(props) {
       const productImg = `/img/${product.name}.svg`;
       const originalCost = product.cost;
       const salePrice = originalCost - originalCost * sale;
-      const productPrice = product.sale[0]
-        ? parseFloat(salePrice).toFixed(2)
-        : parseFloat(originalCost).toFixed(2);
+      const productPrice =
+        product.sale === "true"
+          ? parseFloat(salePrice).toFixed(2)
+          : parseFloat(originalCost).toFixed(2);
       return (
         <div className="product-page">
           <div className="product-details">

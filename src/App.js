@@ -5,13 +5,20 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Profile from "./pages/Profile";
-import Search from "./pages/Search";
 import Cart from "./pages/Cart";
 import Details from "./pages/Details";
 import "./css/app.css";
 import products from "./data/products.json";
 
 export default function App() {
+  const salePokemon = products.pokemon.filter(
+    (pokemon) => pokemon.sale === "true"
+  );
+
+  const evolvedPokemon = products.pokemon.filter(
+    (pokemon) => pokemon.evolved === "true"
+  );
+
   const [filter, setFilter] = useState(false);
   const [cart, setCart] = useState([]);
   const sale = 0.2;
@@ -53,16 +60,37 @@ export default function App() {
   }
 
   function updateFilter(filter) {
-    setFilter(filter);
+    if (filter) {
+      setFilter([...filter]);
+    } else {
+      setFilter([...products.pokemon]);
+    }
+  }
+
+  function doesInclude(item1, item2) {
+    if (!item1) return false;
+    if (!item2) return false;
+
+    if (item1.includes(item2)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   const brand = "Rocket Industries";
   const tagline =
     "Explore freshly caught, pre-trained Pokemon for a steal.  Why bother catching them yourself?";
   return (
-    <div className="container">
+    <div className="wrapper container">
       <header>
-        <Nav brand={brand} cart={cart} />
+        <Nav
+          brand={brand}
+          cart={cart}
+          products={products.pokemon}
+          doesInclude={doesInclude}
+          updateFilter={updateFilter}
+        />
       </header>
       <main className="centered">
         <Routes>
@@ -72,7 +100,9 @@ export default function App() {
               <Home
                 brand={brand}
                 tagline={tagline}
+                doesInclude={doesInclude}
                 updateFilter={updateFilter}
+                filter={{ sale: salePokemon, special: evolvedPokemon }}
               />
             }
           />
@@ -80,7 +110,6 @@ export default function App() {
             path="/shop"
             element={<Shop products={products.pokemon} filter={filter} />}
           />
-          <Route path="/search" element={<Search />} />
           <Route path="/profile" element={<Profile />} />
           <Route
             path="/cart"
