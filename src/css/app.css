@@ -212,7 +212,7 @@ a > *:hover,
 
 .tiled > * {
   all: unset;
-  width: 30%;
+  width: 15rem;
   height: fit-content;
 }
 
@@ -241,22 +241,24 @@ a > *:hover,
   flex-direction: column;
   text-align: center;
   font-weight: bold;
-  gap: 0.25rem;
   text-transform: capitalize;
 }
 
-.product-card > img {
+.product-card > div {
+  height: 100%;
+  width: 100%;
+}
+
+.product-card div > img {
   transition-timing-function: ease-in-out;
-  transition: 0.25s;
+  transition: 0.3s;
   aspect-ratio: 1/1;
   height: 90%;
   width: 90%;
 }
 
-.product-card > img:hover {
-  aspect-ratio: 1/1;
-  height: 100%;
-  width: 100%;
+.product-card img:hover {
+  height: 99%;
 }
 
 .product-details {
