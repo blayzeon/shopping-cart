@@ -9,8 +9,8 @@ export default function Profile() {
     <div className="container">
       <h2>BLAST OFF AT THE SPEED OF LIGHT!</h2>
       <p>
-        Do you like catching and battling with rare Pokemon but want to skip the
-        commitment of feeding and storing for them yourself? <br />
+        Do you like catching and battling Pokemon but wish you could skip the
+        commitment of feeding and storing them yourself? <br />
         <br /> <strong>Join Team Rocket!</strong>
       </p>
       <p>Enjoy these exciting membership perks:</p>
