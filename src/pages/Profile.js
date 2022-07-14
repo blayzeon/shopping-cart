@@ -1,4 +1,5 @@
 import React from "react";
+import Product from "../components/Product";
 
 export default function Profile() {
   const handleclick = (e) => {
@@ -22,7 +23,7 @@ export default function Profile() {
       </ul>
       <div className="flex-text-img">
         <p>Membership starts at only $10,000 per month.</p>
-        <img src="/img/rattata.svg" alt="rattata" />
+        <Product label="rattata" />
         <p>Sign up today and receive a free Rattata!</p>
       </div>
       <form>
