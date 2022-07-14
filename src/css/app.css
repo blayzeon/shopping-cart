@@ -2,6 +2,9 @@
 
 html {
   background-color: rgb(220, 220, 220);
+  background-image: url("https://preview.redd.it/rzlsu46nn5c71.jpg?width=630&format=pjpg&auto=webp&s=f0c5c3c0635256888bc5a512d863427d3f9ef089");
+  background-repeat: repeat;
+  background-size: 13rem;
   display: flex;
   flex: 1;
 }
@@ -36,6 +39,7 @@ body,
 
 main {
   flex-grow: 1;
+  filter: drop-shadow(0 4mm 4mm rgb(23, 0, 0));
 }
 
 .product-name {
@@ -100,9 +104,20 @@ form {
 }
 
 .centered {
-  margin: 0.5rem clamp(0.1rem, 20rem, 20%);
+  margin: 0.9rem 0;
+  margin-right: auto;
+  margin-left: auto;
   padding: 1rem;
-  background-color: white;
+  border-radius: 2rem;
+  background-color: black;
+}
+
+.centered > div {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 1rem;
+  min-height: 90%;
+  min-width: 15rem;
 }
 
 .center-text {
@@ -113,7 +128,9 @@ form {
 
 header {
   position: sticky;
+  z-index: 1;
   top: 0;
+  filter: drop-shadow(0 4mm 4mm rgb(23, 0, 0));
 }
 
 .flex-nav {
@@ -185,6 +202,7 @@ button > *:hover {
 
 .flex-footer {
   display: flex;
+  z-index: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -292,6 +310,15 @@ button > *:hover {
   max-width: 15rem;
 }
 
+.product-sale {
+  color: red;
+}
+
+.text-strike {
+  color: rgb(61, 61, 61);
+  text-decoration: line-through;
+}
+
 .product-counter > button,
 .product-variation > select {
   all: unset;
@@ -338,8 +365,16 @@ button > *:hover {
 }
 
 .product-table {
-  border: 1px solid black;
   width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table tr {
+  border: 1px solid rgba(0, 0, 0, 0.6) !important;
+}
+
+.product-table tr td {
+  padding: 0.5rem 0rem;
 }
 
 .product-table * {
@@ -375,6 +410,26 @@ button > *:hover {
   text-decoration: underline;
 }
 
-.product-table td {
-  border: 1px solid black;
+.faded {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+}
+
+.cart-summary h3 {
+  padding: 0;
+  margin: 0;
 }
