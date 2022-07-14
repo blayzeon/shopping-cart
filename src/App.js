@@ -21,7 +21,12 @@ export default function App() {
 
   const [filter, setFilter] = useState(false);
   const [cart, setCart] = useState([]);
-  const sale = 0.2;
+
+  function returnSale(price) {
+    const amount = parseInt(price);
+    const sale = 0.2;
+    return amount - amount * sale;
+  }
 
   function updateCart(productObj) {
     const isDupe =
@@ -121,7 +126,7 @@ export default function App() {
               <Details
                 products={products.pokemon}
                 variations={products.variation}
-                sale={sale}
+                sale={returnSale}
                 updateCart={updateCart}
               />
             }

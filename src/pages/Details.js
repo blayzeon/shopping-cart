@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Variation from "../components/Variation";
 import Count from "../components/Count";
+import { Link } from "react-router-dom";
 
 export default function Details(props) {
   const [count, setCount] = useState(1);
@@ -18,7 +19,7 @@ export default function Details(props) {
     const product = {
       product: current.name,
       quantity: count,
-      cost: current.cost,
+      cost: current.sale === "true" ? props.sale(current.cost) : current.cost,
       variation: document.querySelector("select").value,
     };
 
@@ -28,19 +29,27 @@ export default function Details(props) {
   function productPage(product, sale) {
     if (product) {
       const productImg = `/img/${product.name}.svg`;
-      const originalCost = product.cost;
-      const salePrice = originalCost - originalCost * sale;
-      const productPrice =
-        product.sale === "true"
-          ? parseFloat(salePrice).toFixed(2)
-          : parseFloat(originalCost).toFixed(2);
+      const originalCost = parseInt(product.cost).toFixed(2);
+
+      const sale =
+        product.sale === "true" ? props.sale(current.cost).toFixed(2) : false;
       return (
         <div className="product-page">
           <div className="product-details">
             <img src={productImg} alt={product.name} />
             <div>
               <h3 className="product-name">{product.name}</h3>
-              <p>Price: ${productPrice}</p>
+              <p>
+                Price:{" "}
+                {sale ? (
+                  <span>
+                    <span className="product-sale">${sale}</span>{" "}
+                    <span className="text-strike">${originalCost}</span>
+                  </span>
+                ) : (
+                  <span>{originalCost}</span>
+                )}
+              </p>
             </div>
           </div>
           <div className="product-options">
