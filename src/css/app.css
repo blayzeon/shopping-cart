@@ -250,6 +250,10 @@ button > *:hover {
   gap: 1rem;
 }
 
+.tiled .product-card img:hover {
+  height: 99%;
+}
+
 .tiled > * {
   all: unset;
   width: 15rem;
@@ -292,10 +296,6 @@ button > *:hover {
   aspect-ratio: 1/1;
   height: 90%;
   width: 90%;
-}
-
-.product-card img:hover {
-  height: 99%;
 }
 
 .product-details {
