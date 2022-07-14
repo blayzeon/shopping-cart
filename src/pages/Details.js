@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Variation from "../components/Variation";
 import Count from "../components/Count";
-import { Link } from "react-router-dom";
+import Product from "../components/Product";
 
 export default function Details(props) {
   const [count, setCount] = useState(1);
@@ -30,9 +30,8 @@ export default function Details(props) {
     props.updateCart(product);
   };
 
-  function productPage(product, sale) {
+  function productPage(product) {
     if (product) {
-      const productImg = `/img/${product.name}.svg`;
       const originalCost = parseInt(product.cost).toFixed(2);
 
       const sale =
@@ -40,7 +39,7 @@ export default function Details(props) {
       return (
         <div className="product-page">
           <div className="product-details">
-            <img src={productImg} alt={product.name} />
+            <Product label={product.name} />
             <div>
               <h3 className="product-name">{product.name}</h3>
               <p>
