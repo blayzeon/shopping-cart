@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Search(props) {
-  const elm = document.getElementById("nav-search");
-  window.onkeydown = (e) => {
-    if (e.keyCode === 13) {
-      if (e.explicitOriginalTarget === elm) {
+  useEffect(() => {
+    window.onkeydown = (e) => {
+      if (e.keyCode === 13) {
         handleClick();
+        const btn = document.querySelector("#search-btn");
+        console.log(btn);
+        btn.click();
       }
-    }
-  };
+    };
+  });
 
   const products = props.products;
   const doesInclude = props.doesInclude;
 
-  const matches = [];
+  let matches = [];
   const handleClick = () => {
+    matches = [];
+    const elm = document.getElementById("nav-search");
     const query = elm.value.toLowerCase();
     products.forEach((product) => {
       if (
@@ -33,7 +37,7 @@ export default function Search(props) {
   return (
     <>
       <input type="text" id="nav-search" />
-      <Link onClick={handleClick} to="/shop">
+      <Link id="search-btn" onClick={handleClick} to="/shop">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path
             fill="inherit"
