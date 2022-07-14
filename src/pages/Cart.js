@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Count from "../components/Count";
+import Product from "../components/Product";
 
 export default function Cart(props) {
   const shippingEstimate = 6.5;
@@ -45,10 +46,7 @@ export default function Cart(props) {
                   <tr key={key}>
                     <td>
                       <Link to={pathName} key={item.product}>
-                        <img
-                          src={`/img/${item.product}.svg`}
-                          alt={item.product}
-                        />
+                        <Product label={item.product} />
                         {item.product}
                       </Link>
                     </td>
