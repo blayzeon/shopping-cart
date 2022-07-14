@@ -11,6 +11,14 @@ import "./css/app.css";
 import products from "./data/products.json";
 
 export default function App() {
+  const images = document.querySelectorAll("img");
+  images.forEach((img) => {
+    img.onerror = function () {
+      img.src = `/shopping-card${img.src}`;
+      console.log("images not loading properly.");
+    };
+  });
+
   const salePokemon = products.pokemon.filter(
     (pokemon) => pokemon.sale === "true"
   );
@@ -101,6 +109,18 @@ export default function App() {
         <Routes>
           <Route
             path="/"
+            element={
+              <Home
+                brand={brand}
+                tagline={tagline}
+                doesInclude={doesInclude}
+                updateFilter={updateFilter}
+                filter={{ sale: salePokemon, special: evolvedPokemon }}
+              />
+            }
+          />
+          <Route
+            path="/shopping-cart"
             element={
               <Home
                 brand={brand}
