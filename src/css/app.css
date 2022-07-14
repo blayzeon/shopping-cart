@@ -110,6 +110,7 @@ form {
   padding: 1rem;
   border-radius: 2rem;
   background-color: black;
+  min-width: 60%;
 }
 
 .centered > div {
@@ -117,7 +118,7 @@ form {
   padding: 1rem;
   border-radius: 1rem;
   min-height: 90%;
-  min-width: 15rem;
+  min-width: max(15rem, 80%);
 }
 
 .center-text {
@@ -365,6 +366,7 @@ button > *:hover {
 }
 
 .product-table {
+  margin-top: 10%;
   width: 100%;
   border-collapse: collapse;
 }
@@ -374,7 +376,7 @@ button > *:hover {
 }
 
 .product-table tr td {
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
 }
 
 .product-table * {
