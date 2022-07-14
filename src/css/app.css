@@ -110,6 +110,7 @@ form {
   border-radius: 2rem;
   background-color: black;
   min-width: 60%;
+  max-width: 10rem;
 }
 
 .centered > div {
@@ -251,7 +252,7 @@ button > *:hover {
 
 .tiled > * {
   all: unset;
-  width: 10rem;
+  width: 15rem;
   height: fit-content;
   padding: 0;
   margin: 0;
@@ -392,7 +393,7 @@ button > *:hover {
 }
 
 .product-table img {
-  width: 5rem;
+  width: 5rem !important;
   padding: 0.5rem;
 }
 
@@ -433,4 +434,34 @@ button > *:hover {
 .cart-summary h3 {
   padding: 0;
   margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  /* nav */
+  nav > ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav > ul > li {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav > ul > li:first-child {
+    display: none;
+  }
+
+  /* body */
+  .centered {
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  .centered > div {
+    margin: 0;
+    border-radius: 0;
+  }
 }
