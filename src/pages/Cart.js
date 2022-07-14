@@ -10,9 +10,9 @@ export default function Cart(props) {
 
   const handleCheckout = () => {
     alert(
-      `We have changed your paypal $${
-        merchTotal + shippingEstimate.toFixed(2)
-      }.  Thank you.`
+      `We have changed your paypal $${parseFloat(
+        merchTotal + shippingEstimate
+      ).toFixed(2)}.  Thank you.`
     );
   };
 

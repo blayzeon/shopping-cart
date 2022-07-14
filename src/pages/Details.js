@@ -7,6 +7,10 @@ export default function Details(props) {
   const [count, setCount] = useState(1);
   const path = window.location.href;
   const urlProduct = path.match(/product\/\s*([^\n\r]*)/);
+  if (urlProduct === null) {
+    console.error("unknown URL for Details.js");
+    return;
+  }
   const current = props.products.find(
     (product) => product.name === urlProduct[1]
   );
